@@ -1,4 +1,8 @@
-for (let i =0; i<256;i++){
+const promptSize=prompt('what size should the grid be?');
+const size=Number(promptSize);
+console.log(typeof(size))
+
+for (let i =0; i<size*size;i++){
     const gridElement= document.createElement("div");
     gridElement.classList.add("gridElement");
     const container= document.getElementById("container");
@@ -23,7 +27,13 @@ gridElements.forEach(function(e){
     e.addEventListener("mouseenter",cellEnter);
     e.addEventListener("dragstart",event=> event.preventDefault());
 });
-
+function resetGrid(){
+    gridElements.forEach(function(e){
+        e.classList.remove("color");
+    })
+}
+const button = document.getElementById("reset");
+button.addEventListener("click",resetGrid);
 // gridElements.forEach(function(e){
 //     e.addEventListener("dragover",()=>e.classList.add("color"))
 //     e.addEventListener("mousedown",()=>e.classList.add("color"))
