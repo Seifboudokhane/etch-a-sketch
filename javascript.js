@@ -1,7 +1,6 @@
 const promptSize=prompt('what size should the grid be?',16);
 const promptColor=prompt('give color hex value',"#211ec7");
 const size=Number(promptSize);
-console.log(typeof(size))
 
 for (let i =0; i<size*size;i++){
     const gridElement= document.createElement("div");
@@ -40,6 +39,7 @@ gridElements.forEach(function(e){
 function resetGrid(){
     gridElements.forEach(function(e){
         e.classList.remove("color");
+        e.style.backgroundColor=" rgb(171, 168, 168)";
     })
 }
 const button = document.getElementById("reset");
