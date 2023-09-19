@@ -5,7 +5,11 @@
     padding: 0;
     margin: 0;
 }
-
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 #container {
     box-sizing: content-box;
     width: 400px;
@@ -13,7 +17,7 @@
     aspect-ratio: 1;
     display: flex;
     flex-wrap: wrap;
-    border: 20px solid rgb(13, 203, 26);
+    border: 20px solid #252525;
 }
 
 .gridElement{
