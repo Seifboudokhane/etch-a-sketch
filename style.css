@@ -7,18 +7,22 @@
 }
 
 #container {
-    width: 640px;
-    height: 640px;
+    box-sizing: content-box;
+    width: 400px;
+    height: auto;
+    aspect-ratio: 1;
     display: flex;
     flex-wrap: wrap;
+    border: 20px solid rgb(13, 203, 26);
 }
 
 .gridElement{
-    width: 40px;
-    height: 40px;
-    border: 1px solid black;
+    background-color: rgb(171, 168, 168);
+    height: auto;
+    aspect-ratio: 1;
+    border: 1px solid rgb(213, 213, 213);
 }
 
 .color {
-    background-color: red;
+    border-width: 0px;
 }
