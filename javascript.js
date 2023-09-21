@@ -58,5 +58,6 @@ function createCanvas(){
         e.addEventListener("mouseup",()=>MDOWN = !MDOWN);
         e.addEventListener("mouseenter",cellEnter);
         e.addEventListener("dragstart",event=> event.preventDefault());
+        e.addEventListener("contextmenu",event=> event.preventDefault());
     });
 }
