@@ -25,7 +25,6 @@ function resetGrid(){
 const button = document.getElementById("reset");
 button.addEventListener("click",resetGrid);
 
-//test
 const button1 = document.getElementById("create");
 button1.addEventListener("click",createCanvas);
 
@@ -37,13 +36,14 @@ function deleteCanvas(){
 function createCanvas(){
     deleteCanvas();
     const promptSize=prompt('what size should the grid be?',16);
-    promptColor=prompt('give color hex value',"#211ec7");
     const size=Number(promptSize);
-
+    promptColor=prompt('give color hex value',"blue");
+    let canvasSize= getComputedStyle(document.querySelector("#container")).width;
+    canvasSize=canvasSize.slice(0,-2);
     for (let i =0; i<size*size;i++){
         const gridElement= document.createElement("div");
         gridElement.classList.add("gridElement");
-        gridElement.style.width=`${400/size}px`
+        gridElement.style.width=`${canvasSize/size}px`
         const container= document.getElementById("container");
         container.appendChild(gridElement);
     }
