@@ -19,7 +19,7 @@ function resetGrid(){
     const gridElements = document.querySelectorAll(".gridElement");
     gridElements.forEach(function(e){
         e.classList.remove("color");
-        e.style.backgroundColor=" rgb(171, 168, 168)";
+        e.style.backgroundColor=" rgb(255, 255, 255)";
     })
 }
 const button = document.getElementById("reset");
