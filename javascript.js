@@ -22,11 +22,16 @@ function resetGrid(){
         e.style.backgroundColor=" rgb(255, 255, 255)";
     })
 }
-const button = document.getElementById("reset");
-button.addEventListener("click",resetGrid);
+const resetButton = document.getElementById("reset");
+resetButton.addEventListener("click",resetGrid);
 
-const button1 = document.getElementById("create");
-button1.addEventListener("click",createCanvas);
+const createButton = document.getElementById("create");
+createButton.addEventListener("click",createCanvas);
+
+const colorButton = document.getElementById("color");
+colorButton.addEventListener("click",()=>{
+    promptColor=prompt('what color do you want ?',"blue");
+});
 
 function deleteCanvas(){
     const gridElements = document.querySelectorAll(".gridElement");
