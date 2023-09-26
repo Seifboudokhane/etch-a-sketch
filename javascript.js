@@ -37,7 +37,7 @@ function createCanvas(){
     deleteCanvas();
     const promptSize=prompt('what size should the grid be?',16);
     const size=Number(promptSize);
-    promptColor=prompt('give color hex value',"blue");
+    promptColor=prompt('what color do you want ?',"blue");
     let canvasSize= getComputedStyle(document.querySelector("#container")).width;
     canvasSize=canvasSize.slice(0,-2);
     for (let i =0; i<size*size;i++){
