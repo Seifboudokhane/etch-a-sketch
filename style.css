@@ -9,6 +9,7 @@
 body{
     
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: #fe9595;
@@ -29,7 +30,6 @@ body{
 
 .buttons{
     display: flex;
-    flex-direction: column;
 }
 
 button {
