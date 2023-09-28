@@ -1,4 +1,4 @@
-let promptColor;
+let promptColor="black";
 let isMouseDown=false;
 document.body.addEventListener("mousedown",()=>isMouseDown=true);
 document.body.addEventListener("mouseup",()=>isMouseDown=false);
@@ -35,7 +35,6 @@ function createCanvas(){
     const promptSize=prompt('what size should the grid be ? (Max=64)',16);
     let size;
     isNaN(promptSize) ? size=16 : (Number(promptSize)>64) ? size=64 : size=Number(promptSize);
-    promptColor="black";
     let canvasSize= getComputedStyle(document.querySelector("#container")).width;
     canvasSize=canvasSize.slice(0,-2);
     for (let i =0; i<size*size;i++){
