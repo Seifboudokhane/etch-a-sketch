@@ -37,11 +37,11 @@ function createCanvas(){
     isNaN(promptSize) ? size=16 : (Number(promptSize)>64) ? size=64 : size=Number(promptSize);
     let canvasSize= getComputedStyle(document.querySelector("#container")).width;
     canvasSize=canvasSize.slice(0,-2);
+    const container= document.getElementById("container");
+    container.style.gridTemplate=`repeat(${size},1fr)/repeat(${size},1fr)`;
     for (let i =0; i<size*size;i++){
         const gridElement= document.createElement("div");
         gridElement.classList.add("gridElement");
-        gridElement.style.width=`${canvasSize/size}px`
-        const container= document.getElementById("container");
         container.appendChild(gridElement);
     }
     const gridElements = document.querySelectorAll(".gridElement");

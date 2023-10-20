@@ -19,10 +19,9 @@ body{
 
 #container {
     box-sizing: content-box;
-    width: clamp(300px,50%,500px);
+    width: clamp(100px,50%,500px);
     aspect-ratio: 1;
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
     background-color: rgb(255, 255, 255);
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
@@ -30,8 +29,6 @@ body{
 /* Classes set by JavaScript */
 
 .gridElement{
-    height: auto;
-    aspect-ratio: 1;
     border: 1px solid rgb(196, 196, 196);
 }
 
